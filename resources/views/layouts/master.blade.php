@@ -32,7 +32,7 @@
     @show
 
 
-    @yield('content')
+    
     <div class="block">
         <div class="section clip">
             <div class="cart clip">
@@ -42,9 +42,9 @@
                 Tomorrow
             </div>
         </div>
-
+    @yield('content')
+    
     </div>
-
 
 </body>
 
