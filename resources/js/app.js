@@ -1,12 +1,21 @@
 import './bootstrap';
+import jQuery from 'jquery';
+window.$ = jQuery;
 
-let bucket = document.getElementById('bucket'),
-    mousePosition,
+let mousePosition,
     offset = [0, 0],
-    isDown = false
+    isDown = false;
+
+const done = document.getElementById('done');
+const   Dtop = done.offsetLeft,
+        Dbot = done.offsetTop;
+
+const remove = document.getElementById('remove');
+const   Rtop = remove.offsetLeft,
+        Rbot = remove.offsetTop;
 
 const divs = document.getElementsByClassName("object"),
-    width = divs.offsetWidth
+    width = divs.offsetWidth;
 
 for (const div of divs) {
     div.addEventListener('mousedown', function (e) {
@@ -14,18 +23,19 @@ for (const div of divs) {
         isDown = true;
         div.style.position = 'absolute';
         div.style.zIndex = '1';
-        bucket.style.display = 'block';
+        done.style.display = 'flex';
+        remove.style.display = 'flex';
         offset = [
-            div.offsetLeft - e.clientX,
-            div.offsetTop - e.clientY
+            60 - e.clientX,
+            8 - e.clientY
         ];
     }, true);
 
     document.addEventListener('mouseup', function () {
         isDown = false;
-        bucket.style.display = 'none';
+        done.style.display = 'none';
+        remove.style.display = 'none';
         div.style.position = 'sticky';
-        offset = [0, 0]
     }, true);
 
     document.addEventListener('mousemove', function (event) {
