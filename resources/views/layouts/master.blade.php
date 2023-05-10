@@ -15,18 +15,14 @@
         </div>
 
         <div class="links">
-            Section 1
-            <ul>
-                <li><a href="">Link #1</a></li>
-                <li><a href="">Link #2</a></li>
-            </ul>
+            Section 1 <br>
+                <a href="">Link #1</a><br>
+                <a href="">Link #2</a>
         </div>
         <div class="links">
-            Section 2
-            <ul>
-                <li><a href="">Link #1</a></li>
-                <li><a href="">Link #2</a></li>
-            </ul>
+            Section 2<br>
+            <a href="">Link #1</a><br>
+            <a href="">Link #2</a>
         </div>
     </div>
     @show
@@ -34,12 +30,15 @@
 
     
     <div class="block">
-        <div class="section clip">
-            <div class="cart clip">
+        <div class="section">
+            <div class="cart">
                 Today
             </div>
-            <div class="cart clip">
-                Tomorrow
+            <div class="cart">
+                This week
+            </div>
+            <div class="cart">
+                Important
             </div>
         </div>
     @yield('content')
