@@ -47,7 +47,7 @@
         </div>
     </div>
 </div>
-<div class="thrash">
+<div id="bucket">
     <div class="done">
         <h1>DONE</h1>
     </div>
