@@ -49,11 +49,11 @@ h
 </div>
 
     <div id="done">
-        <h1>DONE</h1>
+        <h1>DONE 334 789</h1>
     </div>
 
     <div id="remove">
-        <h1>REMOVE</h1>
+        <h1>REMOVE 1316 789</h1>
     </div>
 
 @stop

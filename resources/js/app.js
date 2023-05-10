@@ -6,18 +6,11 @@ let mousePosition,
     offset = [0, 0],
     isDown = false;
 
-const done = document.getElementById('done');
-const   Dtop = done.offsetLeft,
-        Dbot = done.offsetTop;
-
-const remove = document.getElementById('remove');
-const   Rtop = remove.offsetLeft,
-        Rbot = remove.offsetTop;
-
 const divs = document.getElementsByClassName("object"),
     width = divs.offsetWidth;
 
 for (const div of divs) {
+    setTimeout(() => {
     div.addEventListener('mousedown', function (e) {
         div.style.width = width;
         isDown = true;
@@ -31,11 +24,20 @@ for (const div of divs) {
         ];
     }, true);
 
-    document.addEventListener('mouseup', function () {
+    document.addEventListener('mouseup', function (e) {
         isDown = false;
         done.style.display = 'none';
         remove.style.display = 'none';
-        div.style.position = 'sticky';
+        
+        if (e.clientX >= 334 && e.clientY >= 789) {
+            if (e.clientX >= 1316) {
+            } else if(e.clientX < 1316) {
+            }
+        } else {
+            div.style.position = 'sticky';
+        }
+
+
     }, true);
 
     document.addEventListener('mousemove', function (event) {
@@ -51,4 +53,5 @@ for (const div of divs) {
             div.style.top = (mousePosition.y + offset[1]);
         }
     }, true);
+    }, "1000");
 }
