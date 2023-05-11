@@ -4,7 +4,6 @@
     margin: 0.5%;
     border: 0.4vh black solid;
     border-radius: 1%;
-    color: azure;
 }
 
 .object {
@@ -43,5 +42,8 @@
 @media only screen and (max-width: 1370px) {
     .object {
         height: 28vh;
+    }
+    .section {
+        clip-path: polygon(88% 0, 90% 50%, 88% 100%, 0 100%, 0% 50%, 0 0);
     }
   }

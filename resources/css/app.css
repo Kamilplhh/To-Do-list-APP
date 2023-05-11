@@ -1,3 +1,12 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+.fa-xs {
+    padding: 10px 3px 10px 3px ;
+    border-radius: 20%;
+    margin-right: 1%;
+    color: white !important;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -27,15 +36,15 @@ li {
     width: 15vw;
     background-color: rgb(12, 45, 72);
     padding: 2vh;
-    color: white;
+    color: rgb(175, 172, 172);
 }
 
 .sidenav a:hover {
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 
 .sidenav a {
-    color: white;
+    color: rgb(175, 172, 172);
 }
 
 .profile {
@@ -45,8 +54,10 @@ li {
 
 .links {
     width: 100%;
-    margin-top: 4%;
+    margin-top: 8%;
     margin-bottom: 4%;
+    padding-top: 2vh;
+    font-size: 1.3rem;
 }
 
 .section {
@@ -83,13 +94,24 @@ li {
     cursor: pointer;
 }
 
+.date {
+    position: absolute;
+    bottom: 5%;
+    font-size: 1.4rem;
+}
+
+.date:hover {
+    cursor: default;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
 @media only screen and (max-width: 1370px) {
     .cart {
       width: 25vw;
       padding-left: 1.9em;
-    }
-    .section {
-        clip-path: polygon(88% 0, 90% 50%, 88% 100%, 0 100%, 0% 50%, 0 0);
     }
   }
 
