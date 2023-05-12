@@ -24,3 +24,7 @@ Route::get('/notes', function () {
 Route::get('/remove', function () {
     return view('remove');
 });
+
+Route::get('/add', function () {
+    return view('add');
+});

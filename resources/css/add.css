@@ -33,3 +33,53 @@
     justify-content: center;
     align-items: center;
 }
+
+.space {
+    perspective: 3000px;
+    padding-top: 14%;
+    padding-left: 14%;
+}
+
+.triangle {
+    width: 50vw;
+    height: 50vh;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+    display: flex;
+    justify-content: center;
+}
+
+.face {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    color: #aca8a8;
+}
+
+.front {
+    background-color: rgba(12, 45, 72, 1);
+    border: 1px solid black;
+    transform: translateZ(25vw);
+}
+
+.left {
+    background-color: rgba(12, 45, 72, 1);
+    border: 1px solid black;
+    transform: rotateY(90deg) translateZ(25vw);
+}
+
+#rotate {
+    position: absolute;
+    z-index: 1;
+    color: white;
+}
+
+.rotate {
+    transform: rotate3d(0, -90, 0, 0.25turn);
+}
