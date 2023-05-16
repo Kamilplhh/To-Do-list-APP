@@ -12,3 +12,5 @@ const triangle = document.getElementById("triangle");
 button.onclick = function(){
     triangle.classList.toggle('rotate');
 }
+
+datePickerId.min = new Date().toISOString().split("T")[0];

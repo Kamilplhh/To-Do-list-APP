@@ -102,6 +102,8 @@ li {
 
 .date:hover {
     cursor: default;
+    transform: scale(1.1);
+    color: white;
 }
 
 p {

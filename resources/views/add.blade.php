@@ -6,23 +6,28 @@
 <div class="space">
         <div class="triangle" id="triangle">
             <div class="face front">
-                <h2>ADD PLAN</h2><br>
+                <h2>ADD PLAN</h2>
                 <form method="POST" action="">
                     @csrf
-                    <input type="text" name="" placeholder=""></input><br>
-                    <input type="text" name="" placeholder=""></input><br>
-                    <button type="submit">ADD Plan</button>
+                    <textarea name="" placeholder="Description" id="textarea"></textarea><br>
+                    <textarea name="" placeholder="Additional note" id="textarea"></textarea><br>
+                    <input type="date" id="datePickerId"><br>
+                    <select name="cars" id="cars">
+                        <option value="" disabled selected hidden>Select your tag</option>
+                        <option value="daily">Daily</option>
+                    </select><br>
+                    <input type="checkbox" name="important">
+                    <label for="important">Important</label><br>
+                    <button type="submit">ADD</button>
                 </form>
             </div>
 
             <div class="face left">
-                <h2>ADD NOTE</h2><br>
+                <h2>ADD NOTE</h2>
                 <form action="" method="POST">
                     @csrf
-                    <input type="text" name="" placeholder=""></input><br>
-                    <input type="text" name="" placeholder=""></input><br>
-                    <input type="text" name="" placeholder=""></input><br>
-                    <button type="submit">ADD note</button>
+                    <textarea name="" placeholder="Description" id="textarea"></textarea><br>
+                    <button type="submit">ADD</button>
                 </form>
             </div>
 
