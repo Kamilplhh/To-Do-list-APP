@@ -12,11 +12,18 @@
     @section('sidebar')
     <div class="sidenav">
         <div class="profile">
-            <h4>Sign in</h4>
+            @auth
+            <a href="{{ route('signout') }}">
+                <i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
+            <a href="/profile/{{ auth()->user()->id}}">
+            @else
+                <a href="/login">
+            @endauth
+                <i class="fa-solid fa-user fa-xl icon"></i></a>
         </div>
 
         <div class="links">
-            <a href="/home">Planner</a><br>
+            <a href="/">Planner</a><br>
             <a href="/notes">NOTES</a><br>
             <a href="/add">ADD</a><br>
             <a href="/remove">REMOVE</a><br>

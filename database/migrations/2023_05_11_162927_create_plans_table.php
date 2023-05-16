@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->text('desription');
             $table->text('additional');
-            $table->int('important');
+            $table->integer('important');
             $table->bigInteger('userid');
-            $table->int('done');
+            $table->integer('done');
             $table->bigInteger('tag_id');
             $table->date('date');
         });

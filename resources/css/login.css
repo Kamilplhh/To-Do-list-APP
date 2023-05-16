@@ -1,0 +1,88 @@
+input {
+    border-radius: 5%;
+    border: none;
+}
+
+input:focus {
+    background-color: rgb(245, 245, 247);
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.login {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.object {
+    perspective: 3000px;
+}
+
+.triangle {
+    width: 40vw;
+    height: 40vh;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in;
+    display: flex;
+    justify-content: center;
+}
+
+.face {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 40vw;
+    height: 40vh;
+    position: absolute;
+    color: #000000;
+}
+
+.front {
+    background-color: rgb(245, 245, 247);
+    border: 1px solid black;
+    transform: translateZ(11.5vw);
+}
+
+
+.right {
+    background-color: rgba(1, 1, 250, 0.7);
+    border: 1px solid black;
+    transform: rotateY(120deg) translateZ(11.5vw);
+}
+
+.left {
+    background-color: rgb(245, 245, 247);
+    border: 1px solid black;
+    transform: rotateY(-120deg) translateZ(11.5vw);
+}
+
+#rotate {
+    position: absolute;
+    bottom: -10vh;
+    left: 19vw;
+    z-index: 1;
+}
+
+.rotate {
+    transform: rotate3d(0, 120, 0, 0.33turn);
+}
+
+.alert {
+    position: absolute;
+    text-align: center;
+}
