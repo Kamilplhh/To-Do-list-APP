@@ -7,15 +7,16 @@
         <div class="triangle" id="triangle">
             <div class="face front">
                 <h2>ADD PLAN</h2>
-                <form method="POST" action="">
+                <form method="POST" action="{{ route('Plan') }}">
                     @csrf
-                    <textarea name="" placeholder="Description" id="textarea"></textarea><br>
-                    <input type="date" id="datePickerId"><br>
-                    <select name="cars" id="cars">
-                        <option value="" disabled selected hidden>Select your tag</option>
-                        <option value="daily">Daily</option>
+                    <textarea name="description" placeholder="Description" id="textarea"></textarea><br>
+                    <input name="date" type="date" id="datePickerId"><br>
+                    <select name="tag" id="tag">
+                        @foreach($tags as $tag)
+                        <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                        @endforeach
                     </select><br>
-                    <input type="checkbox" name="important">
+                    <input type="checkbox" value="1" name="important">
                     <label for="important">Important</label><br>
                     <button type="submit">ADD</button>
                 </form>
@@ -23,9 +24,9 @@
 
             <div class="face left">
                 <h2>ADD NOTE</h2>
-                <form action="" method="POST">
+                <form action="{{ route('Note') }}" method="POST">
                     @csrf
-                    <textarea name="" placeholder="Description" id="textarea"></textarea><br>
+                    <textarea name="description" placeholder="Description" id="textarea"></textarea><br>
                     <button type="submit">ADD</button>
                 </form>
             </div>

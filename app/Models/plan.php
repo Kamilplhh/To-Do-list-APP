@@ -14,4 +14,13 @@ class plan extends Model
     {
         return $this->belongsTo(tag::class);
     }
+
+    protected $fillable = [
+        'description',
+        'important',
+        'userid',
+        'done',
+        'date',
+        'tag_id'
+    ];
 }

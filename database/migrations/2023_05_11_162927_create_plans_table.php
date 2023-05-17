@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('done');
             $table->bigInteger('tag_id');
             $table->date('date');
+            $table->timestamps();
         });
     }
 

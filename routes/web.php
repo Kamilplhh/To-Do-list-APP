@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\AddController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +36,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/deletenote/{id}', [NoteController::class, 'DeleteNote'])->name('DeleteNote');
     
     
-    Route::get('/add', function () {
-        return view('add');
-    });
+    Route::get('/add', [AddController::class, 'GetTags']);
+    Route::post('AddPlan', [AddController::class, 'AddPlan'])->name('Plan'); 
+    Route::post('AddNote', [AddController::class, 'AddNote'])->name('Note'); 
 
     Route::get('/profile/{id}', [AuthController::class, 'Profile']);
 });
