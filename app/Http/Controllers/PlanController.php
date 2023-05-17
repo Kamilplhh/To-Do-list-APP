@@ -15,4 +15,17 @@ class PlanController extends Controller
 
         return view('home', compact(['plans']));
     }
+
+    public function GetDataR() {
+
+        $plans = plan::where('userid', Auth::id())->get();
+
+        return view('remove', compact(['plans']));
+    }
+
+    public function DeletePlan($id)
+    {
+        plan::where('id', $id)->delete();
+        return redirect()->back();
+    }
 }
