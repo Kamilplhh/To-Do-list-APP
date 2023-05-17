@@ -10,7 +10,6 @@
                 <form method="POST" action="">
                     @csrf
                     <textarea name="" placeholder="Description" id="textarea"></textarea><br>
-                    <textarea name="" placeholder="Additional note" id="textarea"></textarea><br>
                     <input type="date" id="datePickerId"><br>
                     <select name="cars" id="cars">
                         <option value="" disabled selected hidden>Select your tag</option>

@@ -29,12 +29,14 @@
             <a href="/remove">REMOVE</a><br>
         </div>
 
+        @auth
         <div class="links">
             <h5>TAGS</h5>
-            <i class="fa-solid fa-hashtag fa-xs" style="background-color:red;"></i><a href="/home">daily</a><br>
-            <i class="fa-solid fa-hashtag fa-xs" style="background-color:green;"></i><a href="/home">job</a><br>
+            <i class="fa-solid fa-hashtag fa-xs" style="background-color:red;"></i><a href="/tag/">daily</a><br>
+            <i class="fa-solid fa-hashtag fa-xs" style="background-color:green;"></i><a href="/tag/">job</a><br>
         </div>
-
+        @endauth
+        
         <div class="date">
             <p id="clock"></p>
             <p id="date"></p>

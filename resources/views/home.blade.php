@@ -6,9 +6,6 @@
 @section('content')
 <div class="section">
     <div class="cart">
-        Today
-    </div>
-    <div class="cart">
         This week
     </div>
     <div class="cart">
@@ -17,46 +14,19 @@
 </div>
 <div class="list">
     <div class="row">
+        @foreach($plans as $plan)
         <div class="col-4 col-sm-4 col-md-3">
             <div class="object">
-                a
+                <center>
+                <p style="color: {{ $plan->tag->color }}">
+                    {{ $plan->tag->name }}
+                </p>
+                {{ $plan->date }}
+                </center>
+                {{ $plan->description }}
             </div>
         </div>
-        <div class="col-4 col-sm-4 col-md-3">
-            <div class="object">
-                b
-            </div>
-        </div>
-        <div class="col-4 col-sm-4 col-md-3">
-            <div class="object">
-                c
-            </div>
-        </div>
-        <div class="col-4 col-sm-4 col-md-3">
-            <div class="object">
-                d
-            </div>
-        </div>
-        <div class="col-4 col-sm-4 col-md-3">
-            <div class="object">
-                e
-            </div>
-        </div>
-        <div class="col-4 col-sm-4 col-md-3">
-            <div class="object">
-                f
-            </div>
-        </div>
-        <div class="col-4 col-sm-4 col-md-3">
-            <div class="object">
-                g
-            </div>
-        </div>
-        <div class="col-4 col-sm-4 col-md-3">
-            <div class="object">
-                h
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 

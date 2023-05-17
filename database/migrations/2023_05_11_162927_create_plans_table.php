@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->id();
-            $table->text('desription');
-            $table->text('additional');
+            $table->text('description');
             $table->integer('important');
             $table->bigInteger('userid');
             $table->integer('done');
