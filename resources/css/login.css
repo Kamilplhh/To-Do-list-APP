@@ -10,16 +10,16 @@ input:focus {
 button {
     background-color: white;
     color: black;
-    border: 2px solid #4CAF50;
+    border: 2px solid #3051c0;
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: #3051c0;
     color: white;
 }
 
 .login {
-    min-height: 75vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -27,14 +27,14 @@ button:hover {
 }
 
 .object {
-    perspective: 3000px;
+    perspective: 2000px;
 }
 
 .triangle {
     width: 40vw;
     height: 40vh;
     transform-style: preserve-3d;
-    transition: all 1s ease-in;
+    transition: all 0.5s ease-in;
     display: flex;
     justify-content: center;
 }
@@ -49,24 +49,18 @@ button:hover {
     width: 40vw;
     height: 40vh;
     position: absolute;
-    color: #000000;
+    color: #ffffff;
+    box-shadow: 0px 0px 100px 0px rgba(18, 65, 104, 1);
 }
 
 .front {
-    background-color: rgb(245, 245, 247);
+    background-color: rgb(18, 65, 104);
     border: 1px solid black;
     transform: translateZ(11.5vw);
 }
 
-
-.right {
-    background-color: rgba(1, 1, 250, 0.7);
-    border: 1px solid black;
-    transform: rotateY(120deg) translateZ(11.5vw);
-}
-
 .left {
-    background-color: rgb(245, 245, 247);
+    background-color: rgb(18, 65, 104);
     border: 1px solid black;
     transform: rotateY(-120deg) translateZ(11.5vw);
 }

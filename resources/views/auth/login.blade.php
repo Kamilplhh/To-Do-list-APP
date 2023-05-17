@@ -1,5 +1,6 @@
 @section('title', 'Login')
 @vite('resources/css/login.css')
+@extends('layouts.master')
 
 @section('content')
 <div class="login">
@@ -20,8 +21,6 @@
                 </form>
             </div>
 
-            <div class="face back">
-            </div>
             <div class="face left">
                 <h2>Register</h2><br>
                 <form action="{{ route('register.custom') }}" method="POST">
@@ -32,8 +31,6 @@
                     <button type="submit">Sign up</button>
                 </form>
             </div>
-
-            <div class="face right">Easter Egg</div>
 
         </div>
         <i class="fa-solid fa-rotate fa-xl" id="rotate"></i>

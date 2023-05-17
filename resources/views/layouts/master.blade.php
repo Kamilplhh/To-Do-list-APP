@@ -14,7 +14,7 @@
         <div class="profile">
             @auth
             <a href="{{ route('signout') }}">
-                <i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
+                <i class="fa-solid fa-right-from-bracket fa-xl"></i></a><br><br><br>
             <a href="/profile/{{ auth()->user()->id}}">
             @else
                 <a href="/login">

@@ -19,6 +19,8 @@ Route::post('custom-login', [AuthController::class, 'customLogin'])->name('login
 Route::post('custom-registration', [AuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
+Route::get('/profile/{id}', [AuthController::class, 'Profile']);
+
 Route::get('/', function () {
     return view('home');
 });
