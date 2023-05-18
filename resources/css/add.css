@@ -44,7 +44,7 @@
     width: 50vw;
     height: 50vh;
     transform-style: preserve-3d;
-    transition: all 1s ease-in;
+    transition: all 0.5s ease-in;
     display: flex;
     justify-content: center;
 }
@@ -71,17 +71,41 @@
 .left {
     background-color: rgba(12, 45, 72, 1);
     border: 1px solid black;
+    transform: rotateY(-90deg) translateZ(25vw);
+}
+
+.right {
+    background-color: rgba(12, 45, 72, 1);
+    border: 1px solid black;
     transform: rotateY(90deg) translateZ(25vw);
 }
 
-#rotate {
+#rotateL {
+    margin-top: 15vh;
     position: absolute;
+    left: 0;
+    margin-left: 35%;
+    margin-right: 65%;
     z-index: 1;
-    color: white;
+    color: rgb(0, 0, 0);  
 }
 
-.rotate {
+#rotateR {
+    margin-top: 15vh;
+    position: absolute;
+    right: 0;
+    margin-left: 65%;
+    margin-right: 35%;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+}
+
+.rotateR {
     transform: rotate3d(0, -90, 0, 0.25turn);
+}
+
+.rotateL {
+    transform: rotate3d(0, 90, 0, 0.25turn);
 }
 
 #textarea {

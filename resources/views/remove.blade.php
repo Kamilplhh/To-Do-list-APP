@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @vite('resources/css/notes.css')
-@section('title', 'remove')
+@section('title')
 
 @section('content')
 <div class="list">

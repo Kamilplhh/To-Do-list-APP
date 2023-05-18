@@ -41,6 +41,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/add', [AddController::class, 'GetTags']);
     Route::post('AddPlan', [AddController::class, 'AddPlan'])->name('Plan'); 
     Route::post('AddNote', [AddController::class, 'AddNote'])->name('Note'); 
+    Route::post('AddTag', [AddController::class, 'AddTag'])->name('Tag'); 
 
     Route::get('/profile/{id}', [AuthController::class, 'Profile']);
 });

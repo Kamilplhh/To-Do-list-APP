@@ -12,7 +12,7 @@ class PlanController extends Controller
 {
     public function GetData()
     {
-        $tags = tag::get();
+        $tags = tag::where('userid', Auth::id())->get();
 
         $plans = plan::where([
             ['done', 0],
@@ -24,7 +24,7 @@ class PlanController extends Controller
 
     public function GetByImportant()
     {
-        $tags = tag::get();
+        $tags = tag::where('userid', Auth::id())->get();
 
         $plans = plan::where([
             ['done', 0],
@@ -37,7 +37,7 @@ class PlanController extends Controller
 
     public function GetByDate()
     {
-        $tags = tag::get();
+        $tags = tag::where('userid', Auth::id())->get();
 
         $date = date("Y-m-d");
         $date = date("Y-m-d", strtotime("$date +7 day"));
@@ -53,7 +53,7 @@ class PlanController extends Controller
 
     public function GetByTag($id)
     {
-        $tags = tag::get();
+        $tags = tag::where('userid', Auth::id())->get();
 
         $plans = plan::where([
             ['done', 0],
@@ -66,7 +66,7 @@ class PlanController extends Controller
 
     public function GetDataR()
     {
-        $tags = tag::get();
+        $tags = tag::where('userid', Auth::id())->get();
 
         $plans = plan::where('userid', Auth::id())->get();
 
@@ -75,7 +75,7 @@ class PlanController extends Controller
 
     public function GetDataDone()
     {
-        $tags = tag::get();
+        $tags = tag::where('userid', Auth::id())->get();
 
         $plans = plan::where([
             ['done', 1],

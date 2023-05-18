@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @vite('resources/css/home.css')
 @vite('resources/js/home.js')
-@section('title', 'home')
+@section('title', 'HOME')
 
 @section('content')
 <div class="section">

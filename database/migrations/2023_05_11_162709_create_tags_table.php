@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('color');
             $table->string('name');
+            $table->bigInteger('userid');
+            $table->timestamps();
         });
     }
 

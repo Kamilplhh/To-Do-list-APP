@@ -1,5 +1,6 @@
 @section('title', 'Login')
 @vite('resources/css/login.css')
+@vite('resources/js/login.js')
 @extends('layouts.master')
 
 @section('content')

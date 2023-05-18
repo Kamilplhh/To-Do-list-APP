@@ -46,4 +46,15 @@ class AddController extends Controller
 
         return redirect('/');
     }
+
+    public function AddTag(Request $request)
+    {
+        tag::create([
+            'name' => $request['name'],
+            'color' => $request['color'],
+            'userid' => Auth::id(),
+        ]);
+
+        return redirect('/');
+    }
 }
