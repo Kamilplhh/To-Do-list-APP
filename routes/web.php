@@ -34,7 +34,9 @@ Route::group(['middleware' => ['auth']], function() {
     
     Route::get('/notes', [NoteController::class, 'GetData']);
     Route::get('/deletenote/{id}', [NoteController::class, 'DeleteNote'])->name('DeleteNote');
-    
+   
+    Route::get('/done', [PlanController::class, 'GetDataDone']);
+    Route::get('/plandone/{id}', [PlanController::class, 'MarkDone']);
     
     Route::get('/add', [AddController::class, 'GetTags']);
     Route::post('AddPlan', [AddController::class, 'AddPlan'])->name('Plan'); 

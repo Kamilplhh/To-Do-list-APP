@@ -9,6 +9,10 @@ let mousePosition,
 const divs = document.getElementsByClassName("object"),
     width = divs.offsetWidth;
 
+const doneY = $(window).height() * 0.9;
+const doneX = $(window).width() * 0.17;
+const removeX = $(window).width() * 0.57;
+
 for (const div of divs) {
     setTimeout(() => {
     div.addEventListener('mousedown', function (e) {
@@ -25,19 +29,20 @@ for (const div of divs) {
     }, true);
 
     document.addEventListener('mouseup', function (e) {
+        let value = div.getAttribute('value');
         isDown = false;
         done.style.display = 'none';
         remove.style.display = 'none';
         
-        if (e.clientX >= 334 && e.clientY >= 789) {
-            if (e.clientX >= 1316) {
-            } else if(e.clientX < 1316) {
+        if (e.clientX >= doneX && e.clientY >= doneY) {
+            if (e.clientX >= removeX ) {
+                location.href = '/deleteplan/' + value;
+            } else if(e.clientX < removeX ) {
+                location.href = '/plandone/' + value;
             }
         } else {
-            div.style.position = 'sticky';
+            location.reload();
         }
-
-
     }, true);
 
     document.addEventListener('mousemove', function (event) {

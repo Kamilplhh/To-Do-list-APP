@@ -31,7 +31,7 @@ class AddController extends Controller
             'userid' => Auth::id(),
             'tag_id' => $request['tag'],
             'done' => 0,
-            'date' => date("Y-m-d"),
+            'date' => $request['date'],
         ]);
 
         return redirect('/');

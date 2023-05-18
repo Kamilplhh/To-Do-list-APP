@@ -23,8 +23,9 @@
         </div>
 
         <div class="links">
-            <a href="/">Planner</a><br>
+            <a href="/">PLANNER</a><br>
             <a href="/notes">NOTES</a><br>
+            <a href="/done">DONE</a><br>
             <a href="/add">ADD</a><br>
             <a href="/remove">REMOVE</a><br>
         </div>

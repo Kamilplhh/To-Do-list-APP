@@ -20,7 +20,7 @@
     <div class="row">
         @foreach($plans as $plan)
         <div class="col-4 col-sm-4 col-md-3">
-            <div class="object">
+            <div class="object" value="{{ $plan->id }}">
                 <center>
                 <p style="color: {{ $plan->tag->color }}">
                     {{ $plan->tag->name }}
@@ -35,11 +35,11 @@
 </div>
 
 <div id="done">
-    <h1>DONE 334 789</h1>
+    <h1>DONE</h1>
 </div>
 
 <div id="remove">
-    <h1>REMOVE 1316 789</h1>
+    <h1>REMOVE</h1>
 </div>
 
 @stop

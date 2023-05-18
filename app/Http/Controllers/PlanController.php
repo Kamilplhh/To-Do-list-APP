@@ -14,7 +14,10 @@ class PlanController extends Controller
     {
         $tags = tag::get();
 
-        $plans = plan::where('userid', Auth::id())->get();
+        $plans = plan::where([
+            ['done', 0],
+            ['userid', Auth::id()], 
+        ])->get();
 
         return view('home', compact(['plans', 'tags']));
     }
@@ -24,6 +27,7 @@ class PlanController extends Controller
         $tags = tag::get();
 
         $plans = plan::where([
+            ['done', 0],
             ['userid', Auth::id()],
             ['important', 1]
         ])->get();
@@ -39,6 +43,7 @@ class PlanController extends Controller
         $date = date("Y-m-d", strtotime("$date +7 day"));
 
         $plans = plan::where([
+            ['done', 0],
             ['userid', Auth::id()],
             ['date', '<=', $date]
         ])->get();
@@ -51,6 +56,7 @@ class PlanController extends Controller
         $tags = tag::get();
 
         $plans = plan::where([
+            ['done', 0],
             ['userid', Auth::id()],
             ['tag_id', $id]
         ])->get();
@@ -67,9 +73,27 @@ class PlanController extends Controller
         return view('remove', compact(['plans', 'tags']));
     }
 
+    public function GetDataDone()
+    {
+        $tags = tag::get();
+
+        $plans = plan::where([
+            ['done', 1],
+            ['userid', Auth::id()], 
+        ])->get();
+
+        return view('remove', compact(['plans', 'tags']));
+    }
+
     public function DeletePlan($id)
     {
         plan::where('id', $id)->delete();
+        return redirect()->back();
+    }
+
+    public function MarkDone($id)
+    {
+        plan::where('id', $id)->update(['done'=>1]);
         return redirect()->back();
     }
 }
