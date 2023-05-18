@@ -32,8 +32,9 @@
         @auth
         <div class="links">
             <h5>TAGS</h5>
-            <i class="fa-solid fa-hashtag fa-xs" style="background-color:red;"></i><a href="/tag/">daily</a><br>
-            <i class="fa-solid fa-hashtag fa-xs" style="background-color:green;"></i><a href="/tag/">job</a><br>
+            @foreach($tags as $tag)
+                <i class="fa-solid fa-hashtag fa-xs" style="background-color:{{ $tag->color }};"></i><a href="/tag/{{ $tag->id }}">{{ $tag->name }}</a><br>
+            @endforeach
         </div>
         @endauth
         

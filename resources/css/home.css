@@ -14,6 +14,27 @@
     color: white;
 }
 
+.cart {
+    clip-path: polygon(70% 0, 80% 50%, 70% 100%, 0 100%, 10% 50%, 0 0);
+    width: 10vw;
+    background-color: yellow;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    padding-left: 2.5em;
+    color: black;
+}
+
+.cart:hover {
+    transform: scale(1.02);
+    background-color: rgb(228, 228, 18);
+    cursor: pointer;
+}
+
 #done {
     position: absolute;
     margin-left: 1%;
@@ -43,7 +64,8 @@
     .object {
         height: 28vh;
     }
+
     .section {
         clip-path: polygon(88% 0, 90% 50%, 88% 100%, 0 100%, 0% 50%, 0 0);
     }
-  }
+}

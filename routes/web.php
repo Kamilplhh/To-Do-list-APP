@@ -24,13 +24,13 @@ Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/', [PlanController::class, 'GetData']);
+    
     Route::get('/remove', [PlanController::class, 'GetDataR']);
     Route::get('/deleteplan/{id}', [PlanController::class, 'DeletePlan'])->name('DeletePlan');
 
-
-    Route::get('/tag/{id}', function () {
-        return view('home');
-    });
+    Route::get('/important', [PlanController::class, 'GetByImportant']);
+    Route::get('/date', [PlanController::class, 'GetByDate']);
+    Route::get('/tag/{id}', [PlanController::class, 'GetByTag']);
     
     Route::get('/notes', [NoteController::class, 'GetData']);
     Route::get('/deletenote/{id}', [NoteController::class, 'DeleteNote'])->name('DeleteNote');

@@ -5,12 +5,16 @@
 
 @section('content')
 <div class="section">
-    <div class="cart">
-        This week
-    </div>
-    <div class="cart">
-        Important
-    </div>
+    <a href="/date">
+        <div class="cart">
+            This week       
+        </div>
+    </a> 
+    <a href="/important">
+        <div class="cart">   
+            Important   
+        </div>
+    </a> 
 </div>
 <div class="list">
     <div class="row">
