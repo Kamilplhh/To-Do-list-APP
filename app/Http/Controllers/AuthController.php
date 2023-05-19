@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Hash;
 use Session;
 use App\Models\User;
+use App\Models\tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -62,9 +63,19 @@ class AuthController extends Controller
 
     public function Profile($id) {
 
-
+        $tags = tag::where('userid', Auth::id())->get();
         $user = User::where('id', $id)->get();
 
-        return view('profile', compact(['user']));
+        return view('profile', compact(['user', 'tags']));
+    }
+
+    public function updateLogin(Request $request) {
+
+        user::where('id', Auth::id())->update([
+            'name'=>$request['name'],
+            'password' => Hash::make($request['password'])
+            ]);
+        
+        return redirect()->back();
     }
 }

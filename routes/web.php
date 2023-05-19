@@ -19,6 +19,7 @@ use App\Http\Controllers\AddController;
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('custom-login', [AuthController::class, 'customLogin'])->name('login.custom'); 
+Route::post('updateLogin', [AuthController::class, 'updateLogin'])->name('updateLogin'); 
 Route::post('custom-registration', [AuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 
@@ -42,6 +43,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('AddPlan', [AddController::class, 'AddPlan'])->name('Plan'); 
     Route::post('AddNote', [AddController::class, 'AddNote'])->name('Note'); 
     Route::post('AddTag', [AddController::class, 'AddTag'])->name('Tag'); 
-
+    
     Route::get('/profile/{id}', [AuthController::class, 'Profile']);
 });

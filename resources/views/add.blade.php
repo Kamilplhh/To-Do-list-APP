@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @vite('resources/css/add.css')
 @vite('resources/js/add.js')
-@section('title', 'ADD')
 
 @section('content')
 <div class="space">

@@ -1,5 +1,5 @@
 input {
-    border-radius: 5%;
+    border-radius: 20px;
     border: none;
 }
 
@@ -8,14 +8,16 @@ input:focus {
 }
 
 button {
-    background-color: white;
+    background-color: #3051c0;
     color: black;
-    border: 2px solid #3051c0;
+    border: 5px solid #3051c0;
+    border-radius: 20px;
 }
 
 button:hover {
     background-color: #3051c0;
     color: white;
+    border-radius: 20px;
 }
 
 .login {
@@ -79,4 +81,22 @@ button:hover {
 .alert {
     position: absolute;
     text-align: center;
+}
+
+.account {
+    padding-top: 5vh;
+    width: 100%;
+    height: 60vh;
+}
+
+.form {
+    margin-top: 5%;
+}
+
+.form input{
+    margin: 1% 0.2% 1% 0.2%;
+}
+
+.block {
+    padding: 1%;
 }
