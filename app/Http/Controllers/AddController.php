@@ -12,7 +12,7 @@ class AddController extends Controller
 {
     public function GetTags()
     {
-        $tags = tag::get();
+        $tags = tag::where('userid', Auth::id())->get();
 
         return view('add', compact(['tags']));
     }

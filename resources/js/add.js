@@ -11,3 +11,5 @@ buttonR.onclick = function(){
 buttonL.onclick = function(){
     triangle.classList.toggle('rotateL');
 }
+
+datePickerId.min = new Date().toISOString().split("T")[0];

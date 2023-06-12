@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/css/add.css', 
                 'resources/css/login.css',  
                 'resources/js/app.js',
+                'resources/js/add.js',
                 'resources/js/home.js',
                 'resources/js/add.js',
                 'resources/js/login.js',

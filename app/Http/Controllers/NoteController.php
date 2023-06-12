@@ -12,7 +12,7 @@ class NoteController extends Controller
 {
     public function GetData()
     {
-        $tags = tag::get();
+        $tags = tag::where('userid', Auth::id())->get();
 
         $notes = note::where('userid', Auth::id())->get();
         return view('notes', compact(['notes', 'tags']));
